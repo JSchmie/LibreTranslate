@@ -37,7 +37,7 @@ jobs:
         with:
           file: ./docker/Dockerfile
           platforms: linux/amd64,linux/arm64
-          tags: ${{ steps.get-variables.outputs.gh-username-lower }}/libretranslate:${{ env.TAG }}
+          tags: hadr0n/libretranslate:${{ env.TAG }}
           push: true
           cache-from: type=gha
           cache-to: type=gha,mode=max
@@ -65,7 +65,7 @@ jobs:
         with:
           file: ./docker/cuda.Dockerfile
           platforms: linux/amd64
-          tags: ${{ steps.get-variables.outputs.gh-username-lower }}/libretranslate:${{ env.TAG }}-cuda
+          tags: hadr0n/libretranslate:${{ env.TAG }}-cuda
           push: true
           cache-from: type=gha
           cache-to: type=gha,mode=max
